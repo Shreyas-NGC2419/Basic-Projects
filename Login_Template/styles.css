@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins';
+        }
+
+        :root {
+            --boxbgcolor: rgb(190, 152, 243);
+            --boxshadow: rgb(92, 51, 92);
+            --inputcolor: black;
+            --loginbuttonbgcolor: floralwhite;
+            --btnshadow: black;
+            --txtcolor: black;
+            --themebtncolor: black;
+            --btnhovercolor: rgba(255, 250, 240, 0.791)
+        }
+
+        body {
+            background-image: url("https://images.unsplash.com/photo-1511300636408-a63a89df3482?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg");
+            background-position: top;
+            background-repeat: no-repeat;
+
+        }
+
+        .boxspace {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loginbox {
+            height: 550px;
+            width: 450px;
+            opacity: 0.8;
+            background-color: var(--boxbgcolor);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: var(--boxshadow) 0 0 90px;
+        }
+
+
+        .loginbox p:first-child {
+            font-size: 2rem;
+            padding-bottom: 50px;
+            color: var(--txtcolor);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .loginbox input {
+            width: 350px;
+            padding: 20px 20px;
+            color: var(--inputcolor);
+            font-size: 20px;
+            border: none;
+            border-radius: 20px;
+            background-color: var(--loginbuttonbgcolor);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .loginbox input::placeholder {
+            color: var(--inputcolor)
+        }
+
+        .loginbox input:focus {
+            box-shadow: white 0 0 30px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .loginbox button {
+            width: 300px;
+            padding: 10px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 35px;
+            background-color: var(--loginbuttonbgcolor);
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--txtcolor);
+            filter: drop-shadow(0px 2px 5px var(--btnshadow));
+        }
+
+        .loginbox button:active {
+            transform: translateY(2px);
+            transition: transform 0.1s ease;
+        }
+
+        .loginbox button:hover {
+            background-color: var(--btnhovercolor);
+            transition: background-color 0.1s ease;
+        }
+
+        .loginbox .forgot {
+            padding: 20px 0 25px 0;
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        .forgot a {
+            text-decoration: none;
+            color: var(--txtcolor);
+        }
+
+        #themeswitch {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--themebtncolor);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .darkmode {
+            background-image: url(https://i.pinimg.com/originals/a9/00/72/a90072a30e610ef025f9b333d98844ab.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            --themebtncolor: white;
+            --boxbgcolor: rgb(46, 11, 98);
+            --txtcolor: white;
+            --loginbuttonbgcolor: rgb(75, 73, 65);
+            --inputcolor: rgb(239, 239, 239);
+            --btnshadow: white;
+            --boxshadow: rgb(238, 130, 238);
+            --btnhovercolor: rgba(0, 0, 0, 0.8);
+        }
+
+        #themeswitch svg:last-child {
+            display: none;
+        }
+
+        .darkmode #themeswitch svg:first-child {
+            display: none;
+        }
+
+        .darkmode #themeswitch svg:last-child {
+            display: block;
+        }
+
+        @media only screen and (max-width:560px) {
+
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .loginbox p:first-child {
+                font-size: 2rem;
+                padding-bottom: 25px;
+                color: var(--txtcolor);
+                font-weight: 600;
+                text-align: center;
+            }
+
+            .loginbox {
+                height: 400px;
+                width: 350px;
+                opacity: 0.8;
+                background-color: var(--boxbgcolor);
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                font-family: 'Poppins', 'Segoe UI';
+                box-shadow: var(--boxbgcolor) 0 0 90px;
+                padding:20px;
+            }
+
+            .loginbox input {
+                width: 250px;
+                padding: 20px 20px;
+                color: var(--inputcolor);
+                font-size: 20px;
+                border: none;
+                border-radius: 20px;
+                background-color: var(--loginbuttonbgcolor);
+                transition: box-shadow 0.3s ease;
+            }
+
+            .loginbox button {
+                width: 250px;
+                padding: 10px 30px;
+                font-size: 18px;
+                border: none;
+                border-radius: 35px;
+                background-color: var(--loginbuttonbgcolor);
+                cursor: pointer;
+                font-weight: 500;
+                color: var(--txtcolor);
+                filter: drop-shadow(0px 2px 5px var(--btnshadow));
+            }
+
+            .loginbox .forgot {
+                padding: 10px 0 12px 0;
+                font-size: 1.25rem;
+                font-weight: 500;
+            }
+        }
