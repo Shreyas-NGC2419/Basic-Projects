@@ -1,1 +1,1 @@
-This is the repo which contains files of the Stopwatch program.
+This is the repo which contains some of my basic projects as separate folders.
